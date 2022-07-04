@@ -12,16 +12,32 @@
             margin: 0;
         }
 
+        .clearfix:before,
+        .clearfix:after {
+            content: "";
+            display: table;
+        }
+
+        .clearfix:after {
+            clear: both;
+        }
+
+        .clearfix {
+            *zoom: 1;
+        }
+
         body {
+            background-color: #000;
             background-image: url(可平铺循环.png);
             background-position: center top;
             background-size: 800px;
+            background-attachment: fixed;
             color: #ffffff;
             font-family: Simsun, serif, Charis SIL, fangsong;
         }
 
         .nav {
-            background-color: rgba(0, 0, 0, .7);
+            /* background-color: rgba(0, 0, 0, .7); */
             height: 56px;
         }
 
@@ -30,15 +46,15 @@
             color: #fff;
             line-height: 56px;
             font-size: 20px;
-            margin: 0 5%;
+            margin: 0 3%;
         }
 
         .main {
-            margin: 5%;
+            margin: 3%;
         }
 
         .title {
-            padding: 5% 0;
+            padding: 60px 0;
         }
 
         h1 {
@@ -53,7 +69,7 @@
         .content {
             /* max-width: 750px; */
             margin: 20px auto;
-            padding: 1em 5%;
+            padding: 1em 3%;
             background-color: rgba(0, 0, 0, .7);
         }
 
@@ -65,21 +81,6 @@
             padding: 8px 0;
         }
 
-        /* .shenmewanyierazhe {
-            float: left;
-        }
-
-        .jiuminga {
-            float: left;
-        } */
-
-        .table-content {
-            width: auto;
-            min-width: 600px;
-            border-collapse: collapse;
-            margin: 0 auto;
-        }
-
         table,
         td {
             border: 1px solid #fff;
@@ -87,6 +88,66 @@
 
         td {
             text-align: center;
+        }
+
+        .shawanyierazhe {
+            position: absolute;
+            z-index: 3;
+        }
+
+        .jiuminga {
+            /* float: left; */
+            position: relative;
+        }
+
+        .table-left {
+            border-collapse: collapse;
+            border-right: none;
+        }
+
+        .table-left td {
+            background: #000;
+        }
+
+        .vc {
+            visibility: collapse;
+        }
+
+        .table-left .vc {
+            visibility: collapse;
+            border-right: none;
+            border-top: 1px solid transparent;
+            border-bottom: 1px solid transparent;
+            background: transparent;
+        }
+
+        .table-content {
+            width: auto;
+            min-width: 640px;
+            border-collapse: collapse;
+        }
+
+        .impossible {
+            background-color: hsla(12, 100%, 75%, 0.2);
+        }
+
+        span.impossible {
+            display: inline-block;
+            border: 1px solid #fff;
+            width: 2em;
+            height: 10px;
+        }
+
+        .balance {
+            width: 3em;
+        }
+
+        .no-right {
+            border-right: none;
+        }
+
+        .no-left {
+            border-left: none;
         }
 
         .footer {
@@ -107,36 +168,54 @@
 </head>
 
 <body>
-    <div class="nav"><a href="index.html">←化石！</a></div>
+    <div class="nav"><a href="化石！.html">←化石！</a></div>
     <div class="main">
         <div class="title">
             <h1>国际音标表（2005年修订）</h1>
         </div>
         <p class="copy">&copy;2005国际语音学会</p>
-        <div class="content">
+        <div class="content clearfix">
             <h4>辅音（肺气流）</h4>
             <div class="shawanyierazhe">
-                <!-- <table>
+                <table class="table-left">
                     <tr>
+                        <!-- class="vc" -->
                         <td> </td>
-                    <tr></tr>
-                    <td>爆破音</td>
-                    <tr></tr>
-                    <td></td>
-                    <tr></tr>
-                    <td></td>
-                    <tr></tr>
-                    <td></td>
-                    <tr></tr>
-                    <td></td>
-                    <tr></tr>
-                    <td></td>
-                    <tr></tr>
-                    <td></td>
-                    <tr></tr>
-                    <td></td>
+                        <td class="vc">?</td>
                     </tr>
-                </table> -->
+                    <tr>
+                        <td>爆破音</td>
+                        <td class="vc">ʔ/</td>
+                    </tr>
+                    <tr>
+                        <td>鼻音</td>
+                        <td class="vc">ɴ</td>
+                    </tr>
+                    <tr>
+                        <td>颤音</td>
+                        <td class="vc">ʀ</td>
+                    </tr>
+                    <tr>
+                        <td>触音或闪音</td>
+                        <td class="vc">ɽ</td>
+                    </tr>
+                    <tr>
+                        <td>擦音</td>
+                        <td class="vc">ɸ</td>
+                    </tr>
+                    <tr>
+                        <td>边擦音</td>
+                        <td class="vc">ɮ</td>
+                    </tr>
+                    <tr>
+                        <td>近音</td>
+                        <td class="vc">ɰ</td>
+                    </tr>
+                    <tr>
+                        <td>边近音</td>
+                        <td class="vc">ʟ</td>
+                    </tr>
+                </table>
             </div>
             <!-- <div class="shawanyierazhe"> -->
             <div class="jiuminga">
@@ -145,124 +224,201 @@
                         <thead>
                             <tr>
                                 <td> </td>
-                                <td>双唇音</td>
-                                <td>唇齿音</td>
-                                <td>齿音</td>
-                                <td>齿龈音</td>
-                                <td>齿龈后音</td>
-                                <td>卷舌音</td>
-                                <td>硬腭音</td>
-                                <td>软腭音</td>
-                                <td>小舌音</td>
-                                <td>咽音</td>
-                                <td>声门音</td>
+                                <td colspan="2">双唇音</td>
+                                <td colspan="2">唇齿音</td>
+                                <td colspan="2" class="balance">齿音</td>
+                                <td colspan="2">齿龈音</td>
+                                <td colspan="2">齿龈后音</td>
+                                <td colspan="2">卷舌音</td>
+                                <td colspan="2">硬腭音</td>
+                                <td colspan="2">软腭音</td>
+                                <td colspan="2">小舌音</td>
+                                <td colspan="2" class="balance">咽音</td>
+                                <td colspan="2">声门音</td>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>爆破音</td>
-                                <td>p b</td>
-                                <td></td>
-                                <td colspan="3">t d</td>
-                                <td>ʈ ɖ</td>
-                                <td>c ɟ</td>
-                                <td>k g</td>
-                                <td>q ɢ</td>
-                                <td>&nbsp;/</td>
-                                <td>ʔ /</td>
+                                <td class="no-right">p</td>
+                                <td class="no-left">b</td>
+                                <td colspan="2">&nbsp;</td>
+                                <td colspan="2" class="no-right">&nbsp;</td>
+                                <td class="no-right no-left">t</td>
+                                <td class="no-left no-right">d</td>
+                                <td colspan="2" class="no-left">&nbsp;</td>
+                                <td class="no-right">ʈ</td>
+                                <td class="no-left">ɖ</td>
+                                <td class="no-right">c</td>
+                                <td class="no-left">ɟ</td>
+                                <td class="no-right">k</td>
+                                <td class="no-left">g</td>
+                                <td class="no-right">q</td>
+                                <td class="no-left">ɢ</td>
+                                <td>&nbsp;</td>
+                                <td class="impossible"></td>
+                                <td>ʔ</td>
+                                <td class="impossible"></td>
                             </tr>
                             <tr>
                                 <td>鼻音</td>
-                                <td>&nbsp;m</td>
-                                <td>&nbsp;ɱ</td>
-                                <td colspan="3">&nbsp;n</td>
-                                <td>&nbsp;ɳ</td>
-                                <td>&nbsp;ɲ</td>
-                                <td>&nbsp;ŋ</td>
-                                <td>&nbsp;ɴ</td>
-                                <td>/</td>
-                                <td>/</td>
+                                <td class="no-right">&nbsp;</td>
+                                <td class="no-left">m</td>
+                                <td class="no-right">&nbsp;</td>
+                                <td class="no-left">ɱ</td>
+                                <td colspan="3" class="no-right"></td>
+                                <td class="no-right no-left">n</td>
+                                <td colspan="2" class="no-left"></td>
+                                <td class="no-right">&nbsp;</td>
+                                <td class="no-left">ɳ</td>
+                                <td class="no-right">&nbsp;</td>
+                                <td class="no-left">ɲ</td>
+                                <td class="no-right">&nbsp;</td>
+                                <td class="no-left">ŋ</td>
+                                <td class="no-right">&nbsp;</td>
+                                <td class="no-left">ɴ</td>
+                                <td colspan="2" class="impossible"></td>
+                                <td colspan="2" class="impossible"></td>
                             </tr>
                             <tr>
                                 <td>颤音</td>
-                                <td>&nbsp;ʙ</td>
-                                <td></td>
-                                <td colspan="3">&nbsp;r</td>
-                                <td></td>
-                                <td></td>
-                                <td>/</td>
-                                <td>&nbsp;ʀ</td>
-                                <td></td>
-                                <td>/</td>
+                                <td class="no-right">&nbsp;</td>
+                                <td class="no-left">ʙ</td>
+                                <td colspan="2"></td>
+                                <td colspan="3" class="no-right"></td>
+                                <td class="no-left no-right">r</td>
+                                <td colspan="2" class="no-left"></td>
+                                <td colspan="2"></td>
+                                <td colspan="2"></td>
+                                <td colspan="2" class="impossible"></td>
+                                <td class="no-right">&nbsp;</td>
+                                <td class="no-left">ʀ</td>
+                                <td colspan="2"></td>
+                                <td colspan="2" class="impossible"></td>
                             </tr>
                             <tr>
                                 <td>触音或闪音</td>
-                                <td></td>
-                                <td>&nbsp;ⱱ</td>
-                                <td colspan="3">&nbsp;ɾ</td>
-                                <td>&nbsp;ɽ</td>
-                                <td></td>
-                                <td>/</td>
-                                <td></td>
-                                <td></td>
-                                <td>/</td>
+                                <td colspan="2"></td>
+                                <td class="no-right">&nbsp;</td>
+                                <td class="no-left">ⱱ</td>
+                                <td colspan="3" class="no-right"></td>
+                                <td class="no-right no-left">ɾ</td>
+                                <td colspan="2" class="no-left"></td>
+                                <td class="no-right">&nbsp;</td>
+                                <td class="no-left">ɽ</td>
+                                <td colspan="2"></td>
+                                <td colspan="2" class="impossible"></td>
+                                <td colspan="2"></td>
+                                <td colspan="2"></td>
+                                <td colspan="2" class="impossible"></td>
                             </tr>
                             <tr>
                                 <td>擦音</td>
-                                <td>ɸ β</td>
-                                <td>f v</td>
-                                <td>θ ð</td>
-                                <td>s z</td>
-                                <td>ʃ ʒ</td>
-                                <td>ʂ ʐ</td>
-                                <td>ç ʝ</td>
-                                <td>x ɣ</td>
-                                <td>χ ʁ</td>
-                                <td>ħ ʕ</td>
-                                <td>h ɦ</td>
+                                <td class="no-right">ɸ</td>
+                                <td class="no-left">β</td>
+                                <td class="no-right">f</td>
+                                <td class="no-left">v</td>
+                                <td class="no-right">θ</td>
+                                <td class="no-left">ð</td>
+                                <td class="no-right">s</td>
+                                <td class="no-left">z</td>
+                                <td class="no-right">ʃ</td>
+                                <td class="no-left">ʒ</td>
+                                <td class="no-right">ʂ</td>
+                                <td class="no-left">ʐ</td>
+                                <td class="no-right">ç</td>
+                                <td class="no-left">ʝ</td>
+                                <td class="no-right">x</td>
+                                <td class="no-left">ɣ</td>
+                                <td class="no-right">χ</td>
+                                <td class="no-left">ʁ</td>
+                                <td class="no-right">ħ</td>
+                                <td class="no-left">ʕ</td>
+                                <td class="no-right">h</td>
+                                <td class="no-left">ɦ</td>
                             </tr>
                             <tr>
                                 <td>边擦音</td>
-                                <td>/</td>
-                                <td>/</td>
-                                <td colspan="3">ɬ ɮ</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td>/</td>
-                                <td>/</td>
+                                <td colspan="2" class="impossible"></td>
+                                <td colspan="2" class="impossible"></td>
+                                <td colspan="2" class="no-right"></td>
+                                <td class="no-left no-right">ɬ</td>
+                                <td class="no-left no-right">ɮ</td>
+                                <td colspan="2" class="no-left"></td>
+                                <td colspan="2"></td>
+                                <td colspan="2"></td>
+                                <td colspan="2"></td>
+                                <td colspan="2"></td>
+                                <td colspan="2" class="impossible"></td>
+                                <td colspan="2" class="impossible"></td>
                             </tr>
                             <tr>
                                 <td>近音</td>
-                                <td></td>
-                                <td>&nbsp;ʋ</td>
-                                <td colspan="3">&nbsp;ɹ</td>
-                                <td>&nbsp;ɻ</td>
-                                <td>&nbsp;j</td>
-                                <td>&nbsp;ɰ</td>
-                                <td></td>
-                                <td></td>
-                                <td>/</td>
+                                <td colspan="2"></td>
+                                <td class="no-right">&nbsp;</td>
+                                <td class="no-left">ʋ</td>
+                                <td colspan="3" class="no-right"></td>
+                                <td class="no-left no-right">ɹ</td>
+                                <td colspan="2" class="no-left no-right"></td>
+                                <td class="no-right">&nbsp;</td>
+                                <td class="no-left">ɻ</td>
+                                <td class="no-right">&nbsp;</td>
+                                <td class="no-left">j</td>
+                                <td class="no-right">&nbsp;</td>
+                                <td class="no-left">ɰ</td>
+                                <td colspan="2"></td>
+                                <td colspan="2"></td>
+                                <td colspan="2" class="impossible"></td>
                             </tr>
                             <tr>
                                 <td>边近音</td>
-                                <td>/</td>
-                                <td>/</td>
-                                <td colspan="3">&nbsp;l</td>
-                                <td>&nbsp;ɭ</td>
-                                <td>&nbsp;ʎ</td>
-                                <td>&nbsp;ʟ</td>
-                                <td></td>
-                                <td>/</td>
-                                <td>/</td>
+                                <td colspan="2" class="impossible"></td>
+                                <td colspan="2" class="impossible"></td>
+                                <td colspan="3" class="no-right"></td>
+                                <td class="no-left no-right">l</td>
+                                <td colspan="2" class="no-left"></td>
+                                <td class="no-right">&nbsp;</td>
+                                <td class="no-left">ɭ</td>
+                                <td class="no-right">&nbsp;</td>
+                                <td class="no-left">ʎ</td>
+                                <td class="no-right">&nbsp;</td>
+                                <td class="no-left">ʟ</td>
+                                <td colspan="2"></td>
+                                <td colspan="2" class="impossible"></td>
+                                <td colspan="2" class="impossible"></td>
+                            </tr>
+                            <tr class="vc">
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
                 <!-- </div> -->
             </div>
-            <p>符号成对出现时，右侧符号代表浊辅音。/表示发音被判断为不可能。</p>
+            <p>符号成对出现时，右侧符号代表浊辅音。<span class="impossible"></span>
+                表示发音被判断为不可能。</p>
         </div>
     </div>
 </body>
