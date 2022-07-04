@@ -13,15 +13,17 @@
         }
 
         body {
+            background-color: black;
             background-image: url(可平铺循环.png);
             background-position: center top;
             background-size: 800px;
+            background-attachment: fixed;
             color: #ffffff;
             font-family: Simsun, serif, fangsong;
         }
 
         .nav {
-            background-color: rgba(0, 0, 0, .7);
+            /* background-color: rgba(0, 0, 0, .7); */
             height: 56px;
         }
 
@@ -30,15 +32,15 @@
             color: #fff;
             line-height: 56px;
             font-size: 20px;
-            margin: 0 5%;
+            margin: 0 3%;
         }
 
         .main {
-            margin: 5%;
+            margin: 0 3%;
         }
 
         .title {
-            padding: 30% 0;
+            padding: 200px 0;
         }
 
         h1 {
@@ -50,10 +52,6 @@
             text-align: center;
         }
 
-        img {
-            width: 100%;
-        }
-
         .content {
             /* max-width: 750px; */
             margin: 0 auto;
@@ -61,7 +59,7 @@
         }
 
         .ipa {
-            padding: 1em 5%;
+            padding: 1em 3%;
             background-color: rgba(0, 0, 0, .7);
             margin: 20px 0;
         }
@@ -72,12 +70,13 @@
         }
 
         .dinosaur {
-            padding: 1em 5%;
+            padding: 1em 3%;
             background-color: rgba(0, 0, 0, .7);
         }
 
         .dinosaur ul {
-            margin: 20px 5% 36px;
+            margin: 20px 0 36px;
+            list-style-type: none;
         }
 
         .dinosaur h2 {
@@ -86,6 +85,10 @@
 
         .dinosaur p {
             margin: 1em 0;
+        }
+
+        img {
+            width: 100%;
         }
 
         .footer {
