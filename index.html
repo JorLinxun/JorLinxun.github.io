@@ -7,9 +7,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>一块马鸣溪龙化石</title>
     <style>
+        @font-face {
+            font-family: 'yuanjiemingchao';
+            src: url('fonts/源界明朝体.ttf');
+            src: url('fonts/源界明朝体.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
         * {
             padding: 0;
             margin: 0;
+        }
+
+        em,
+        i {
+            font-style: normal;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        img {
+            border: 0;
+            vertical-align: middle;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .clearfix:before,
+        .clearfix:after {
+            content: "";
+            display: table;
+        }
+
+        .clearfix:after {
+            clear: both;
+        }
+
+        .clearfix {
+            *zoom: 1;
         }
 
         body {
@@ -19,7 +63,7 @@
             background-size: 800px;
             background-attachment: fixed;
             color: #ffffff;
-            font-family: Simsun, serif, fangsong;
+            font-family: Simsun, "\5B8B\4F53", serif, fangsong;
         }
 
         .nav {
@@ -69,6 +113,42 @@
             color: #e13d0d;
         }
 
+        nav>a {
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #fff;
+            width: 49%;
+            max-width: 250px;
+            height: 180px;
+            margin-bottom: 3%;
+        }
+
+        nav>a:nth-child(2n-1) {
+            float: left;
+        }
+
+        nav>a:nth-child(2n) {
+            float: right;
+        }
+
+        nav a h2 {
+            padding-right: 30%;
+            color: #fff;
+            font-family: yuanjiemingchao;
+            font-size: 96px;
+            text-align: center;
+            line-height: 150px;
+        }
+
+        nav a em {
+            position: absolute;
+            top: -20%;
+            left: -20%;
+            color: rgba(255, 255, 255, 0.3);
+            font-family: yuanjiemingchao;
+            font-size: 150px;
+        }
+
         .dinosaur {
             padding: 1em 3%;
             background-color: rgba(0, 0, 0, .7);
@@ -76,7 +156,6 @@
 
         .dinosaur ul {
             margin: 20px 0 36px;
-            list-style-type: none;
         }
 
         .dinosaur h2 {
@@ -119,6 +198,38 @@
             <div class="ipa">
                 <p>石头有<a href="IPA.html" target="_blank">声带</a>吗？</p>
             </div>
+            <nav class="clearfix">
+                <a href="#">
+                    <div class="tools">
+                        <em>具</em>
+                        <h2>具</h2>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="collection">
+                        <em>摘</em>
+                        <h2>摘</h2>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="north">
+                        <em>北</em>
+                        <h2>北</h2>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="original">
+                        <em>千</em>
+                        <h2>千</h2>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="notes">
+                        <em>真</em>
+                        <h2>真</h2>
+                    </div>
+                </a>
+            </nav>
             <div class="dinosaur">
                 <ul>
                     <li>脊索动物门</li>
